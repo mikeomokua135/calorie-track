@@ -47,7 +47,7 @@ const loadExercise = async () => {
 
   try {
     const response = await fetch(
-      `http://localhost:3333/exercise?date=${today()}`,
+      `https://calorie-track-api.onrender.com/exercise?date=${today()}`,
       {
         headers: {
           'X-Authorization': getSessionToken(),
@@ -90,7 +90,7 @@ const addActivity = async () => {
 
   try {
     const response = await fetch(
-      'http://localhost:3333/exercise',
+      'https://calorie-track-api.onrender.com/exercise',
       {
         method: 'POST',
 
@@ -137,7 +137,7 @@ const deleteActivity = async (exerciseId) => {
 
   try {
     const response = await fetch(
-      `http://localhost:3333/exercise/${exerciseId}`,
+      `https://calorie-track-api.onrender.com/exercise/${exerciseId}`,
       {
         method: 'DELETE',
 

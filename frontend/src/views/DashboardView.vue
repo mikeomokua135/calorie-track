@@ -94,7 +94,7 @@ const loadDashboard = async () => {
     const [foodResponse, exerciseResponse] =
       await Promise.all([
         fetch(
-          `http://localhost:3333/food?date=${today()}`,
+          `https://calorie-track-api.onrender.com/food?date=${today()}`,
           {
             headers: {
               'X-Authorization': sessionToken,
@@ -103,7 +103,7 @@ const loadDashboard = async () => {
         ),
 
         fetch(
-          `http://localhost:3333/exercise?date=${today()}`,
+          `https://calorie-track-api.onrender.com/exercise?date=${today()}`,
           {
             headers: {
               'X-Authorization': sessionToken,
@@ -183,7 +183,7 @@ const updateCalorieGoal = async () => {
 
   try {
     const response = await fetch(
-      'http://localhost:3333/profile/calorie-goal',
+      'https://calorie-track-api.onrender.com/profile/calorie-goal',
       {
         method: 'PUT',
 

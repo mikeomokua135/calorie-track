@@ -78,7 +78,7 @@ const loadFood = async () => {
 
   try {
     const response = await fetch(
-      `http://localhost:3333/food?date=${today()}`,
+      `https://calorie-track-api.onrender.com/food?date=${today()}`,
       {
         headers: {
           'X-Authorization': getSessionToken(),
@@ -153,8 +153,8 @@ const saveFood = async () => {
     const isEditing = editingId.value !== null
 
     const url = isEditing
-      ? `http://localhost:3333/food/${editingId.value}`
-      : 'http://localhost:3333/food'
+      ? `https://calorie-track-api.onrender.com/food/${editingId.value}`
+      : 'https://calorie-track-api.onrender.com/food'
 
     const response = await fetch(url, {
       method: isEditing ? 'PUT' : 'POST',
@@ -210,7 +210,7 @@ const deleteFood = async (entryId) => {
 
   try {
     const response = await fetch(
-      `http://localhost:3333/food/${entryId}`,
+      `https://calorie-track-api.onrender.com/food/${entryId}`,
       {
         method: 'DELETE',
 

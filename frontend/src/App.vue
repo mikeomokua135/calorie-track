@@ -20,7 +20,7 @@ const logout = async () => {
 
   try {
     if (sessionToken) {
-      await fetch('http://localhost:3333/logout', {
+      await fetch('https://calorie-track-api.onrender.com/logout', {
         method: 'POST',
 
         headers: {

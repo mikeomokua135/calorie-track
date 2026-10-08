@@ -14,7 +14,7 @@ const login = async () => {
   loading.value = true
 
   try {
-    const response = await fetch('http://localhost:3333/login', {
+    const response = await fetch('https://calorie-track-api.onrender.com/login', {
       method: 'POST',
 
       headers: {

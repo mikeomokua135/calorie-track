@@ -127,13 +127,13 @@ const loadHistory = async () => {
   try {
     const [foodResponse, exerciseResponse] =
       await Promise.all([
-        fetch('http://localhost:3333/food', {
+        fetch('https://calorie-track-api.onrender.com/food', {
           headers: {
             'X-Authorization': sessionToken,
           },
         }),
 
-        fetch('http://localhost:3333/exercise', {
+        fetch('https://calorie-track-api.onrender.com/exercise', {
           headers: {
             'X-Authorization': sessionToken,
           },

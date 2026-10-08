@@ -20,7 +20,7 @@ const register = async () => {
   loading.value = true
 
   try {
-    const response = await fetch('http://localhost:3333/users', {
+    const response = await fetch('https://calorie-track-api.onrender.com/users', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
